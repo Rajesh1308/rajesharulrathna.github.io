@@ -1,11 +1,15 @@
 body {
     display: flex;
     justify-content: center;
-    
+    background-color: black;
     height: 100vh;
     margin: 0;
 }
 
+.navbar-adjust li{
+    color: white;
+    background-color: aliceblue;
+}
 
 .my_pic{
     height: 270px;
@@ -13,20 +17,135 @@ body {
     position: relative;
     border-radius: 50%;
     margin-top: 100px;
-    border: 5px solid rgb(111, 206, 218);
+    border: 5px solid cyan;
+    box-shadow: 10px rgb(36, 132, 164);
 }
 
 .name-container {
+    color: white;
     margin-top: 70px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.bold-text {
+.name {
     font-weight: bold;
+    color: cyan;
 }
 
-.details-container {
-    color: rgb(9, 237, 161);
-    background-color: aquamarine;
-    height: 800px;
+.details {
+    margin-top: 200px;
+    color: aliceblue;
+}
+
+.cyan {
+    color: cyan;
+}
+
+
+
+.bgcyan {
+    background-color: cyan;
+}
+
+.about-title{
+    font-size: 50px;
+    font-weight: bolder;
+    text-decoration: underline cyan;
+    padding: 10px;
+}
+
+.skills {
+    margin-top: 200px;
+}
+
+.skills-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline cyan;
+}
+
+.skill-list-title {
+    font-weight: 650;
+    font-size: 28px;
+}
+
+.align-center {
+    list-style-type: none;
+    text-align: center;
+    margin-left: -25px;
+    margin-top: -15px;
+}
+
+.mt {
+    margin-top: 20px;
+}
+
+.mt-title {
+    margin-top: 20px;
+}
+
+ul {
+    margin-left: -25px;
+    text-align: center;
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.test {
+    background-color: blueviolet;
+}
+
+.project-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline cyan;
+    margin-top: 170px;
+    margin-bottom: 50px;
+}
+
+
+
+.proj-card {
+    padding: 30px;
+}
+
+.card{
+    background: transparent;
+    color: white;
+}
+
+.visit-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: black;
+    border: 1px solid cyan;
+    color: cyan;
+}
+
+.visit-btn:hover {
+    color: black;
+    background-color: cyan;
+    box-shadow: 0 0 100px 2px cyan;
+}
+
+.blog-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline cyan;
+    margin-top: 170px;
+    margin-bottom: 50px;
+}
+
+.contact-info ion-icon {
+    margin-top: 30px;
+    background-color: rgba(58, 57, 57, 0.526);
+    border-radius: 50%;
+    font-size: 25px;
+    color: cyan;
+    padding: 25px;
 }
