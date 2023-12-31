@@ -8,7 +8,37 @@
     <title>My Portfolio</title>
 </head>
 <body>
+
+
     <div class="container">
+
+        <nav>
+            <ul class="sidebar">
+                <li><a onclick="hideSidebar()" href="#"><ion-icon name="close-outline"></ion-icon></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Hire Me</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">My Portfolio</a></li>
+                <li><a class="hideOnMobile" href="#">Home</a></li>
+                <li><a class="hideOnMobile" href="#">About</a></li>
+                <li><a class="hideOnMobile" href="#">Skills</a></li>
+                <li><a class="hideOnMobile" href="#">Projects</a></li>
+                <li><a class="hideOnMobile" href="#">Awards</a></li>
+                <li><a class="hideOnMobile" href="#">Hire Me</a></li>
+                <li><a onclick="showSidebar()" class="menu-button" href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+            </ul>
+        </nav>
+
+
+
+
+
        <div class="image-container text-center">
         <img class="my_pic img-fluid" src="./Images/My_image.jpeg" alt="Rajesh">
        </div>
@@ -36,44 +66,80 @@
 
        <div class="details">
         <div class="about">
-            <div class="row text-center">
-                <div class="col-sm-6  about-title align-self-center">About <span class="cyan">me</span> </div>
-                <div class="col-sm-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis delectus ipsam deleniti culpa minima assumenda, vel, ab voluptates, qui aperiam ratione incidunt aut sed amet provident quibusdam sapiente magnam enim?</div>
+            <div class="row">
+                <div class="col-sm-6 text-center about-title align-self-center">About <span class="cyan">me</span> </div>
+                <div class="col-sm-6 about-content">I am an aspiring engineering, interested in exploration of various aspects of Information Technology. I am also a front-end developer. I make responsive websites with interactive designs. I also like to build and automate many tasks using Python. I can also build supervised Machine Learning model and deploy the same in a web page. I have basic knowledge in web application penetration testing and Cybersecurity. Currently, I am in top 9% of users in Try Hack Me platform.</div>
 
             </div>
         </div>
 
         <div class="skills">
             <p class="skills-title text-center">My <span class="cyan">skills</span></p>
-            <div class="row text-center">
-                <div class="col-sm-4 align-self-center">
-                    <div class="align-self-center">
-                        <p class="skill-list-title">Programming<span class="cyan"> Languages</span></p>
-                        <ul class="mt align-center">
-                            <li>Python</li>
-                            <li>Javascript</li>
-                            <li>C++</li>
-                            <li>C</li>
+            <div class="row">
+                <div class="col-lg-4 mt">
+                    <div class="skill-list align-self-center">
+                        <p class="skill-list-title text-center">Programming<span class="cyan"> Languages</span></p>
+                        <ul class="align-center">
+                            <li>Python <br>
+                                <progress id="file" max="100" value="60"></progress>
+                            </li>
+                            <li>Javascript <br>
+                                <progress id="file" max="100" value="40"></progress>
+                            </li>
+                            <li>C++ <br>
+                                <progress id="file" max="100" value="75"></progress>
+                            </li>
+                            <li>C <br>
+                                <progress id="file" max="100" value="65"></progress>
+
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4 text-center">
-                    <div class="align-self-center">
-                        <p class="text-center mt-title skill-list-title">Too<span class="cyan">ls</span></p>
-                        <ul class="align-center mt">
-                            <li>Git</li>
-                            <li>Docker</li>
-                            <li>Burpsuit</li>
+                <div class="col-lg-4 mt">
+                    <div class="skill-list align-self-center">
+                        <p class="text-center skill-list-title">Too<span class="cyan">ls</span></p>
+                        <ul class="align-center">
+                            <li>Git <br>
+                                <progress id="file" max="100" value="80"></progress>
+
+                            </li>
+                            <li>Docker <br>
+                                <progress id="file" max="100" value="40"></progress>
+
+                            </li>
+                            <li>Burpsuit <br>
+                                <progress id="file" max="100" value="70"></progress>
+
+                            </li>
+                            <li>Postman <br>
+                                <progress id="file" max="100" value="80"></progress>
+
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="align-self-center">
-                        <p class="skill-list-title mt-title">Soft <span class="cyan">skills</span></p>
-                        <ul class="align-center mt">
-                            <li>Communication</li>
-                            <li>Problem Solving</li>
-                            <li>Leadership</li>
+                <div class="col-lg-4 mt">
+                    <div class="skill-list align-self-center">
+                        <p class="skill-list-title text-center">Othe<span class="cyan">rs</span></p>
+                        <ul class="align-center">
+                            <li>Machine Learning <br>
+                                <progress id="file" max="100" value="45"></progress>
+                            </li>
+                            <li>Postgresql <br>
+                                <progress id="file" max="100" value="60"></progress>
+
+                            </li>
+                            <li>Flask <br>
+                                <progress id="file" max="100" value="40"></progress>
+
+                            </li>
+                            <li>Web application Security <br>
+                                <progress id="file" max="100" value="47"></progress>
+                            </li>
+                            <li>Data Analytics <br>
+                                <progress id="file" max="100" value="70"></progress>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -180,7 +246,7 @@
     </div>
 
 
-
+    <script src="./assets/js/index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

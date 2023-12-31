@@ -6,10 +6,85 @@ body {
     margin: 0;
 }
 
-.navbar-adjust li{
-    color: white;
-    background-color: aliceblue;
+nav {
+    background-color: black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
 }
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover {
+    background-color: rgb(176, 176, 176);
+}
+
+nav li:first-child{
+    margin-right: auto;
+    font-size: 25px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+    color: white;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 1200px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
 
 .my_pic{
     height: 270px;
@@ -51,7 +126,11 @@ body {
     font-size: 50px;
     font-weight: bolder;
     text-decoration: underline cyan;
-    padding: 10px;
+    padding: 30px;
+}
+
+.about-content {
+    font-size: 20px;
 }
 
 .skills {
@@ -67,13 +146,21 @@ body {
 .skill-list-title {
     font-weight: 650;
     font-size: 28px;
+    padding-top: 20px;
+}
+
+.skill-list {
+    background-color: rgb(44, 40, 40);
+    height: 100%;
+    padding: 20px;
 }
 
 .align-center {
     list-style-type: none;
-    text-align: center;
-    margin-left: -25px;
+    text-align: left;
     margin-top: -15px;
+    margin-left: 15px;
+    margin-right: 35px;
 }
 
 .mt {
@@ -94,6 +181,29 @@ ul li {
     font-size: 20px;
     font-weight: 500;
 }
+
+progress {
+    border: none;
+    width: 100%;
+    height: 10px;
+    background: crimson;
+  }
+  
+  progress {
+    color: lightblue;
+  }
+  
+  progress::-moz-progress-bar {
+    background: lightblue;
+  }
+  
+  progress::-webkit-progress-value {
+    background: cyan;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: grey;
+  }
 
 .test {
     background-color: blueviolet;
