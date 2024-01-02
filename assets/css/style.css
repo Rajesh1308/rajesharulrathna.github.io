@@ -6,6 +6,23 @@ body {
     margin: 0;
 }
 
+
+@keyframes scroll-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  
+  .top-progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 8px;
+    background: cyan;
+    z-index: 900;
+    transform-origin: 0 50%;
+    animation: scroll-progress auto linear;
+    animation-timeline: scroll();
+  }
+
 nav {
     background-color: black;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -55,7 +72,7 @@ nav li:first-child{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    backdrop-filter: blur(10px);
+    background-color: black;
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -83,6 +100,7 @@ nav li:first-child{
     }
     .menu-button{
         display: block;
+        margin-left: auto;
     }
 }
 
@@ -105,9 +123,23 @@ nav li:first-child{
 
 .name-container {
     color: white;
-    margin-top: 70px;
+    margin-top: 200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: name;
+    animation-duration: 1s;
 }
+
+@keyframes name {
+    from{
+        color: white;
+        opacity: 0;
+        transform: translate(0, -70px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 
 .headline {
     padding-left: 5%;
@@ -120,7 +152,7 @@ nav li:first-child{
 }
 
 .details {
-    margin-top: 200px;
+    margin-top: 120px;
     color: aliceblue;
 }
 
@@ -128,10 +160,18 @@ nav li:first-child{
     color: cyan;
 }
 
-
+.cyan:hover{
+    color: white;
+}
 
 .bgcyan {
     background-color: cyan;
+}
+
+.about {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
 }
 
 .about-title{
@@ -143,6 +183,11 @@ nav li:first-child{
 
 .about-content {
     font-size: 20px;
+    font-weight: 500;
+    padding: 30px 50px 30px 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    background: linear-gradient(135deg, rgb(32, 250, 250), rgb(93, 227, 227));
 }
 
 .skills {
@@ -194,28 +239,70 @@ ul li {
     font-weight: 500;
 }
 
-progress {
-    border: none;
+
+@keyframes slide-from-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-18%);
+    }
+}
+.animate-card {
+    animation: auto linear slide-from-bottom both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
+}
+
+
+
+
+.progress-bar-wrap {
     width: 100%;
     height: 10px;
-    background: crimson;
-  }
-  
-  progress {
-    color: lightblue;
-  }
-  
-  progress::-moz-progress-bar {
-    background: lightblue;
-  }
-  
-  progress::-webkit-progress-value {
-    background: cyan;
-  }
-  
-  progress::-webkit-progress-bar {
-    background: grey;
-  }
+    background-color: grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+@keyframes progress-bar-slide {
+    from {
+      width: 0%;
+    }
+    to {
+
+    }
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: cyan;
+
+    animation: auto linear progress-bar-slide both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
+    animation-iteration-count: 1;
+}
+
+.w30 {width: 30%;}
+.w35 {width: 35%;}
+.w40 {width: 40%;}
+.w45 {width: 45%;}
+.w50 {width: 50%;}
+.w55 {width: 55%;}
+.w60 {width: 60%;}
+.w65 {width: 65%;}
+.w70 {width: 70%;}
+.w75 {width: 75%;}
+.w80 {width: 80%;}
+.w85 {width: 85%;}
+.w90 {width: 90%;}
+.w95 {width: 95%;}
 
 .test {
     background-color: blueviolet;
@@ -270,4 +357,24 @@ progress {
     font-size: 25px;
     color: cyan;
     padding: 25px;
+    transition: 0.5s;
+}
+
+.contact-info ion-icon:hover {
+
+    color: black;
+    background-color: cyan;
+}
+
+.designer-name {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    height: 200px;
 }
